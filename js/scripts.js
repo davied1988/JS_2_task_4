@@ -2,12 +2,12 @@ function drawTree(levels) {
 	var star = '';
 	for (var i = 0; i < levels; i++) {
 		star += '* ';
-		for (var j = 0; j < levels; j++) {
+        var space = '';
+		for (var j = levels; j > i; j--) {
+			space += " ";
 		}
-		console.log(star);
+		console.log(space + star);
 	}
 }
 
-console.log(drawTree);
-
-drawTree(15);
+drawTree(10);
